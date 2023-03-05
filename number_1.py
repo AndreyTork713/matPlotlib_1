@@ -6,14 +6,17 @@ def main():
 
     # Построить линейный график
 
-    plt.plot(x_coords, y_coords)
-    plt.xlabel("что-то по оси Х")
-    plt.ylabel("Что-то по оси У")
+    plt.plot(x_coords, y_coords, marker='o  ')
+    plt.title("Продажи с разбивкой по годам")
+    plt.xlabel("Год")
+    plt.ylabel("Объём продаж")
+    # Настроить метки делений
+    plt.xticks([0, 1, 2, 3, 4], [2017, 2018, 2019, 2020, 2021])
+    plt.yticks([0, 1, 2, 3, 4, 5], ['$0m', '$1m', '$2m', '$3m', '$4m', '$5m'])
+
     plt.grid(True)
-    plt.title("Просто линейный график чего-то там")
 
     # Показать линейный график
-
     plt.show()
 
 
